@@ -8,20 +8,21 @@ namespace dict {
 
 void Dictionary::insert(const string& de, const string& en) {
   // HINWEIS: Nutzen Sie die Methode insert() des Wurzelknotens.
-  root.insert(de, en);
+  // TODO
 }
 
 string Dictionary::lookup(const string& de) {
   // HINWEIS: Nutzen Sie die Methode find() des Wurzelknotens.
   //          Prüfen Sie anschließend, ob der zurückgegebene Pointer nullptr
   //          ist.
-  auto node = root.find(de);
-  return node ? node->value : "";
+  // TODO
+  return "";
 }
 
 bool Dictionary::contains_de(const string& de) {
   // HINWEIS: Nutzen Sie die Methode find() des Wurzelknotens.
-  return root.find(de) != nullptr;
+  // TODO
+  return false;
 }
 
 TEST_CASE("empty") {

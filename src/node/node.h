@@ -22,7 +22,8 @@ struct Node {
   /// D.h. wenn die Kind-Pointer nullptr sind.
   bool is_empty() const {
     // HINWEIS: Prüfen Sie für beide Kind-Knoten, ob sie nullptr sind.
-    return left == nullptr && right == nullptr;
+    // TODO
+    return false;
   }
 
   /// Setzt den gegebenen Schlüssel und Wert in den Knoten ein.
@@ -32,12 +33,7 @@ struct Node {
     // HINWEIS: Setzen Sie den gegebenen Schlüssel und Wert in den Knoten ein.
     //          Prüfen Sie außerdem, ob der Knoten leer ist und erzeugen Sie
     //          ggf. leere Kind-Knoten.
-    key = key_;
-    value = value_;
-    if (is_empty()) {
-      left = new Node();
-      right = new Node();
-    }
+    // TODO
   }
 
   /// Fügt einen neuen Knoten in den Baum ein.
@@ -45,13 +41,7 @@ struct Node {
     // HINWEIS: Prüfen Sie, ob der Knoten leer ist.
     //          Wenn ja, setzen Sie Schlüssel und Wert ein.
     //          Andernfalls rufen Sie rekursiv insert() auf.
-    if (is_empty()) {
-      return set(key_, value_);
-    }
-    if (key_ <= key) {
-      return left->insert(key_, value_);
-    }
-    return right->insert(key_, value_);
+    // TODO
   }
 
   /// Liefert einen Pointer auf den Knoten mit dem gegebenen Schlüssel.
@@ -61,16 +51,8 @@ struct Node {
     //          Wenn ja, geben Sie nullptr zurück.
     //          Andernfalls vergleichen Sie den gesuchten Schlüssel mit dem
     //          aktuellen Schlüssel und rufen ggf. rekursiv find() auf.
-    if (is_empty()) {
-      return nullptr;
-    }
-    if (key_ == key) {
-      return this;
-    }
-    if (key_ < key) {
-      return left->find(key_);
-    }
-    return right->find(key_);
+    // TODO
+    return nullptr;
   }
 };
 
