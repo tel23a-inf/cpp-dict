@@ -103,4 +103,8 @@ TEST_CASE("find") {
   }
 }
 
+template struct Node<int, int>;
+template struct Node<string, string>;
+template struct Node<string, int>;
+
 }  // namespace bintree
