@@ -7,15 +7,20 @@ using namespace std;
 namespace dict {
 
 void Dictionary::insert(const string& de, const string& en) {
+  // HINWEIS: Nutzen Sie die Methode insert() des Wurzelknotens.
   root.insert(de, en);
 }
 
 string Dictionary::lookup(const string& de) {
+  // HINWEIS: Nutzen Sie die Methode find() des Wurzelknotens.
+  //          Prüfen Sie anschließend, ob der zurückgegebene Pointer nullptr
+  //          ist.
   auto node = root.find(de);
   return node ? node->value : "";
 }
 
 bool Dictionary::contains_de(const string& de) {
+  // HINWEIS: Nutzen Sie die Methode find() des Wurzelknotens.
   return root.find(de) != nullptr;
 }
 
