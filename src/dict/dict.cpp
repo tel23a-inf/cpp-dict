@@ -16,7 +16,7 @@ string Dictionary::lookup(const string& de) {
   //          Prüfen Sie anschließend, ob der zurückgegebene Pointer nullptr
   //          ist.
   auto node = root.find(de);
-  return node ? node->value : "";
+  return node != nullptr ? node->value : "";
 }
 
 bool Dictionary::contains_de(const string& de) {
